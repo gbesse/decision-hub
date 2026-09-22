@@ -1,13 +1,18 @@
 {
   "name": "@gbesse/decision-hub",
   "version": "0.1.0",
+  "private": true,
   "description": "Private Jev policy workspaces with tenant-isolated persistence and revocable aggregate reports.",
   "type": "module",
   "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "start": "node scripts/local-preview.mjs",
     "test": "node --test tests/*.test.mjs",
     "check": "node scripts/check.mjs",
+    "release:check": "npm run check && npm test",
     "db:generate": "drizzle-kit generate"
   },
   "devDependencies": {

@@ -26,9 +26,13 @@ The hosted application is a focused deployment of Workbench's policy/evidence wo
 
 ## Validation
 
-`npm test` runs five tests covering exact production SQL, two-user isolation, immutable versions, quotas, secret redaction, scoped reports, revocation and a real Chromium policy → evaluation → share → revoke journey. `npm run check` checks authored JavaScript syntax. The browser test includes mobile overflow checks. Deployment itself is verified through the hosting platform; a local identity fixture is not a production authentication audit.
+`npm run release:check` checks authored JavaScript syntax and runs five tests covering exact production SQL, two-user isolation, immutable versions, quotas, secret redaction, scoped reports, revocation and a real Chromium policy → evaluation → share → revoke journey. The browser test includes mobile overflow checks. Deployment itself is verified through the hosting platform; a local identity fixture is not a production authentication audit.
 
 The page exposes a feature-detected read-only WebMCP workspace tool. Browser support was unavailable in the local QA browser; that optional extension is not claimed as validated.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the development contract and
+[SECURITY.md](SECURITY.md) for private reporting instructions and the trusted
+identity-header boundary.
 
 ## Reuse and license
 
