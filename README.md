@@ -34,6 +34,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the development contract and
 [SECURITY.md](SECURITY.md) for private reporting instructions and the trusted
 identity-header boundary.
 
+The `esbuild` override in `package.json` keeps Drizzle Kit's deprecated loader
+chain on a patched release. Retain it until Drizzle Kit removes
+`@esbuild-kit/esm-loader`; `npm audit` and `npm run db:generate` must stay green
+when changing the database toolchain.
+
 ## Reuse and license
 
 Uses the existing DecisionPacks contract and the Workbench support example. See [THIRD_PARTY.md](THIRD_PARTY.md) for pinned source attribution. Exports remain compatible with Decision Workbench review traces after wrapping successful report rows as `{schemaVersion:1,pack,rows}`. MIT.

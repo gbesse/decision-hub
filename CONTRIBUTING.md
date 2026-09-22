@@ -12,6 +12,7 @@ Requires Node.js 24 and Chromium for Playwright.
 npm ci --ignore-scripts
 npx playwright install chromium
 npm run release:check
+npm audit
 ```
 
 The local preview uses a fixed synthetic identity and is not a production
@@ -28,6 +29,9 @@ authentication test.
 - Add a regression test for schema, migration, authentication, quota, secret
   handling or browser-flow changes.
 - Do not edit an applied migration; add a new migration instead.
+- Keep the documented `esbuild` override until Drizzle Kit removes its
+  deprecated loader dependency; verify the migration CLI after dependency
+  updates.
 
 Report suspected tenant isolation or credential disclosure bugs privately as
 described in [SECURITY.md](SECURITY.md).
