@@ -1,6 +1,6 @@
 {
   "name": "@gbesse/decision-hub",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Private Jev policy workspaces with tenant-isolated persistence and revocable aggregate reports.",
   "type": "module",
