@@ -13,6 +13,7 @@
     "test": "node --test tests/*.test.mjs",
     "check": "node scripts/check.mjs",
     "release:check": "npm run check && npm test",
+    "live-smoke": "node scripts/live-smoke.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "devDependencies": {
