@@ -28,6 +28,11 @@ The hosted application is a focused deployment of Workbench's policy/evidence wo
 
 `npm run release:check` checks authored JavaScript syntax and runs five tests covering exact production SQL, two-user isolation, immutable versions, quotas, secret redaction, scoped reports, revocation and a real Chromium policy → evaluation → share → revoke journey. The browser test includes mobile overflow checks. Deployment itself is verified through the hosting platform; a local identity fixture is not a production authentication audit.
 
+`npm run live-smoke` is an explicit, manual check that makes exactly one paid
+request with synthetic text when `TYPESAFE_API_KEY` is set. It exercises the
+same Worker evaluation path with an in-memory database and fails if the key is
+found in the stored report. It is never run by CI.
+
 The page exposes a feature-detected read-only WebMCP workspace tool. Browser support was unavailable in the local QA browser; that optional extension is not claimed as validated.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the development contract and
