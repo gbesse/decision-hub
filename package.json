@@ -1,6 +1,6 @@
 {
   "name": "@gbesse/decision-hub",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Private Jev policy workspaces with tenant-isolated persistence and revocable aggregate reports.",
   "type": "module",
@@ -14,7 +14,8 @@
     "check": "node scripts/check.mjs",
     "release:check": "npm run check && npm test",
     "live-smoke": "node scripts/live-smoke.mjs",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "demo:revocation": "node examples/revocable-report.mjs"
   },
   "devDependencies": {
     "drizzle-kit": "0.31.11",

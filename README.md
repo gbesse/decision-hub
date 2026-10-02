@@ -47,3 +47,7 @@ when changing the database toolchain.
 ## Reuse and license
 
 Uses the existing DecisionPacks contract and the Workbench support example. See [THIRD_PARTY.md](THIRD_PARTY.md) for pinned source attribution. Exports remain compatible with Decision Workbench review traces after wrapping successful report rows as `{schemaVersion:1,pack,rows}`. MIT.
+
+## Offline revocation walkthrough
+
+Run `npm run demo:revocation` after `npm ci --ignore-scripts` to save a synthetic policy, evaluate a private invoice, create an aggregate share, and revoke it. The example checks that the share omits the private input and returns 404 after revocation. It uses in-memory SQLite and makes no Jev or deployment request.
